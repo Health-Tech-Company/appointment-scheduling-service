@@ -52,9 +52,11 @@ jobs:
         run: |
           docker push "gcr.io/$PROJECT_ID/$IMAGE:$TAG"
 
-      - name: Install Gcloud Component
-        run: |-
-          gcloud components install gke-gcloud-auth-plugin
+      - name: Install GKE Auth Plugin
+        run: sudo apt-get install google-cloud-cli-gke-gcloud-auth-plugin
+
+      - name: Configure Docker in GKE
+        run: gcloud --quiet auth configure-docker
 
       - name: Deploy to GKE
         run: |
