@@ -9,7 +9,7 @@ on:
 env:
   PROJECT_ID: ${{secrets.GKE_PROJECT_ID}}
   SI_CLUSTER: health-tech
-  SI_ZONE: us-central1-c
+  SI_ZONE: us-central1
   DEPLOYMENT_NAME: appointment-scheduling-service
   IMAGE: appointment-scheduling-service
   TAG: prod
