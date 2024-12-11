@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: appointment-scheduling-service
-          image: gcr.io/health-tech/appointment-scheduling-service:prod
+          image: gcr.io/cobalt-balancer-444315-g1/appointment-scheduling-service:prod
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
