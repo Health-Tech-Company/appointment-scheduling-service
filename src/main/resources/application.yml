@@ -6,6 +6,7 @@ spring:
 
   application:
     name: AppointmentSchedulingService
+
 server:
   port: 8080
   servlet:
