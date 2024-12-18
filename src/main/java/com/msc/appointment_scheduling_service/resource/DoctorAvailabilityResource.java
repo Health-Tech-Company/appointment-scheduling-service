@@ -17,11 +17,11 @@ public class DoctorAvailabilityResource {
 
     @PostMapping
     public ResponseEntity<DoctorAvailability> addAvailability(@RequestBody DoctorAvailability availability) {
-        return ResponseEntity.ok(doctorAvailabilityRepository.save(availability));
+        return ResponseEntity.ok(this.doctorAvailabilityRepository.save(availability));
     }
 
     @GetMapping("/{doctorId}")
     public ResponseEntity<List<DoctorAvailability>> getDoctorAvailability(@PathVariable String doctorId) {
-        return ResponseEntity.ok(doctorAvailabilityRepository.findByDoctorId(doctorId));
+        return ResponseEntity.ok(this.doctorAvailabilityRepository.findByDoctorId(doctorId));
     }
 }
