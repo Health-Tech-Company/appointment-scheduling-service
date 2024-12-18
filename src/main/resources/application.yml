@@ -8,3 +8,5 @@ spring:
     name: AppointmentSchedulingService
 server:
   port: 8080
+  servlet:
+    context-path: /api/appointment-scheduling-service
